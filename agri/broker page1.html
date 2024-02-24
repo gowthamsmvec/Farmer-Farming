@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Broker page 1</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+
+    <style>
+        body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(196, 196, 196);
+      text-align: center;
+    }
+
+    #timer {
+      font-size: 24px;
+      margin-top: 50px;
+    }
+
+        .form-control:focus {
+            box-shadow: none;   
+            border-color: #727272
+        }
+
+        .profile-button {
+            background: rgb(75, 75, 75);
+            box-shadow: none;
+            border: none
+        }
+
+        .profile-button:hover {
+            background: #1e1e1e
+        }
+
+        .profile-button:focus {
+            background: #3e3e3e;
+            box-shadow: none
+        }
+
+        .profile-button:active {
+            background: #525252;
+            box-shadow: none
+        }
+
+        .back:hover {
+            color: #000000;
+            cursor: pointer
+        }
+
+        .labels {
+            font-size: 15px
+        }
+
+        .add-experience:hover {
+            background: #1eb932;
+            color: #fff;
+            cursor: pointer;
+            border: solid 1px #919191
+        }
+		.rounded-circle {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+		
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div class="m-4">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">Broker page</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="file:///D:/Group%20project/pro2.html" class="nav-item nav-link ">Help</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="navbar-nav">
+                    <a href="file:///D:/Group%20project/index.html" class="nav-item nav-link">LogOut</a>
+                </div>
+            </div>
+
+    </div>
+</nav>
+    <div class="container rounded bg-light mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-3 border-right">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+    <img class="rounded-circle mt-5" width="150px" height="150px" id="profile-photo-preview" src="http://drive.google.com/uc?export=view&id=1QoA24XVdDmzvSyXyI67ZiPThZ-Nr4Rmo">
+    <span class="font-weight-bold" style="color:rgb(0, 0, 0);">Broker name</span>
+    <div class="profile-photo-upload">
+        <label for="profile-photo" class="profile-photo-label" style="color:rgb(0, 0, 0);">Choose Profile Photo</label>
+        <input type="file" id="profile-photo" style="display: none;">
+        <button id="upload-button" class="btn btn-success" type="button">Upload</button>
+    </div>
+</div>
+            </div>
+            <div class="col-md-5 border-right">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right" style="color:rgb(0, 0, 0);">Tomato</h4>
+                    </div>
+                    <div>
+                      
+                      <div>
+                        <div>
+                          
+                        </div>
+                        <div>
+                          <div id="timer"></div>
+                          <div id="bet-section">
+                            <div>
+                              <h6>highest bet</h6>
+                              <p id="highest-bet-amount">1250</p>
+                            </div>
+                            <div>
+                              <br>
+                              <button type="button" class="btn btn-secondary" onclick="increaseBet(100)">100</button>
+                              <button type="button" class="btn btn-secondary" onclick="increaseBet(200)">200</button>
+                              <button type="button" class="btn btn-secondary" onclick="increaseBet(500)">500</button>
+                              <div>
+                                <button type="button" class="btn btn-secondary" onclick="increaseBet(1000)">1000</button>
+                                <button type="button" class="btn btn-secondary" onclick="increaseBet(2000)">2000</button>
+                                <button type="button" class="btn btn-secondary" onclick="increaseBet(3000)">3000</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                     
+                      <div>
+                        <div>
+                          
+                        </div>
+                        <div>
+                         
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                     
+                      
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                   <div">
+                   <br>
+                   <div class="p-3 mb-2 bg-success text-white">
+                    <h5>Tomato</h5>
+                    <div class="p-1 mb-1 bg-success text-white" style="display: flex; justify-content: space-between;">
+                      <div>
+                        <h10>Farmer amount: 1250</h10><br>
+                      </div>
+                      <div>
+                        <br>
+                        <button type="button" class="btn btn-info">Visit</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-3 mb-2 bg-success text-white">
+                    <h5>Carrot</h5>
+                    <div class="p-1 mb-1 bg-success text-white" style="display: flex; justify-content: space-between;">
+                      <div>
+                        <h10>Farmer amount: 2250</h10><br>
+                      </div>
+                      <div>
+                        <br>
+                        <button type="button" class="btn btn-info">Visit</button>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+                  
+                    </div>
+                </div>
+                  
+              </div><!-- Status Upload  -->
+            </div><!-- Widget Area -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+    
+</body>
+
+
+
+<script>
+  // Set the target date and time for the bet to end
+  var targetDate = new Date("2023-06-03T18:00:00Z").getTime();
+
+  // Update the timer every second
+  var timerInterval = setInterval(function() {
+    // Get the current date and time
+    var now = new Date().getTime();
+
+    // Calculate the remaining time in milliseconds
+    var remainingTime = targetDate - now;
+
+    // Check if the timer has ended
+    if (remainingTime < 0) {
+      clearInterval(timerInterval);
+      document.getElementById("timer").innerHTML = "Bet timer has ended";
+      return;
+    }
+
+    // Calculate the remaining hours, minutes, and seconds
+    var minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+    // Display the remaining time
+    document.getElementById("timer").innerHTML = "Time left: " + minutes + "m " + seconds + "s";
+  }, 1000); // Update every second (1000 milliseconds)
+</script>
+<script>
+  function increaseBet(amount) {
+    // Get the current highest bet amount
+    var highestBetAmount = parseInt(document.getElementById("highest-bet-amount").innerText);
+
+    // Calculate the new highest bet amount by adding the clicked amount
+    var newHighestBetAmount = highestBetAmount + amount;
+
+    // Update the highest bet amount in the HTML
+    document.getElementById("highest-bet-amount").innerText = newHighestBetAmount;
+  }
+</script>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Farmer page</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+
+    <style>
+        body {
+            background: rgb(196, 196, 196)
+        }
+
+        .form-control:focus {
+            box-shadow: none;   
+            border-color: #727272
+        }
+
+        .profile-button {
+            background: rgb(75, 75, 75);
+            box-shadow: none;
+            border: none
+        }
+
+        .profile-button:hover {
+            background: #1e1e1e
+        }
+
+        .profile-button:focus {
+            background: #3e3e3e;
+            box-shadow: none
+        }
+
+        .profile-button:active {
+            background: #525252;
+            box-shadow: none
+        }
+
+        .back:hover {
+            color: #000000;
+            cursor: pointer
+        }
+
+        .labels {
+            font-size: 15px
+        }
+
+        .add-experience:hover {
+            background: #1eb932;
+            color: #fff;
+            cursor: pointer;
+            border: solid 1px #919191
+        }
+		.rounded-circle {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+		
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div class="m-4">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">Farmer page</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="file:///D:/Group%20project/pro2.html" class="nav-item nav-link ">Help</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="navbar-nav">
+                    <a href="file:///D:/Group%20project/index.html" class="nav-item nav-link">LogOut</a>
+                </div>
+            </div>
+
+    </div>
+</nav>
+    <div class="container rounded bg-light mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-3 border-right">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+    <img class="rounded-circle mt-5" width="150px" height="150px" id="profile-photo-preview" src="http://drive.google.com/uc?export=view&id=1QoA24XVdDmzvSyXyI67ZiPThZ-Nr4Rmo">
+    <span class="font-weight-bold" style="color:rgb(0, 0, 0);">Farmer name</span>
+    <div class="profile-photo-upload">
+        <label for="profile-photo" class="profile-photo-label" style="color:rgb(0, 0, 0);">Choose Profile Photo</label>
+        <input type="file" id="profile-photo" style="display: none;">
+        <button id="upload-button" class="btn btn-success" type="button">Upload</button>
+    </div>
+</div>
+            </div>
+            <div class="col-md-5 border-right">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right" style="color:rgb(0, 0, 0);">History</h4>
+                    </div>
+                    <div class="p-3 mb-2 bg-success text-white">
+                      <h5>Carrot</h5>
+                      <div class="p-1 mb-1 bg-success text-white" style="display: flex; justify-content: space-between;">
+                        <div>
+                          <h10>Farmer amount: 1250</h10><br>
+                          <h10>Beted amount: 2550</h10>
+                        </div>
+                        <div>
+                          <p>Date: 03-06-23</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="p-3 mb-2 bg-success text-white">
+                      <h5>Carrot</h5>
+                      <div class="p-1 mb-1 bg-success text-white" style="display: flex; justify-content: space-between;">
+                        <div>
+                          <h10>Farmer amount: 1250</h10><br>
+                          <h10>Beted amount: 2550</h10>
+                        </div>
+                        <div>
+                          <p>Date: 03-06-23</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="p-3 mb-2 bg-danger text-white" style="position: relative;">
+                      <h5>Tomato</h5>
+                      <h6>Farmer amount: 1575</h6>
+                      <h6>Top Beted amount: 2075</h6>
+                      <p class="text-right"><span id="countdowntimer">1000 </span> Seconds</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center experience" style="color:rgb(0, 0, 0);"><span>Enter Betting Details</span><span class="border px-3 p-1 add-experience"></div><br>
+                    <div class="col-md-12"><label class="labels" style="color:rgb(0, 0, 0);">Fruit and vegtables</label><input type="integer" class="form-control" placeholder="Enter your answer" value=""></div>
+                    <div class="col-md-12"><label class="labels" style="color:rgb(0, 0, 0);">Weight</label><input type="integer" class="form-control" placeholder="In KG" value=""></div>
+                    <div class="col-md-12"><label class="labels" style="color:rgb(0, 0, 0);">harvested Time</label><input type="integer" class="form-control" placeholder="In Time" value=""></div>
+                    <div class="col-md-12"><label class="labels" style="color:rgb(0, 0, 0);">Enter the Price</label><input type="integer" class="form-control" placeholder="In rupies" value=""></div>
+                </div>
+                  <button type="submit" class="border px-3 p-1 add-experience"><i class="fa fa-share"></i>Upload your Betting Details</button>
+              </div><!-- Status Upload  -->
+            </div><!-- Widget Area -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+    <script>
+        $(document).ready(function() {
+            $('#upload-button').click(function() {
+                $('#profile-photo').click();
+            });
+
+            $('#profile-photo').change(function() {
+                var file = $(this)[0].files[0];
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#profile-photo-preview').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(file);
+            });
+        });
+    </script>
+
+<script>
+  var timeleft = 1000;
+      var downloadTimer = setInterval(function(){
+      timeleft--;
+      document.getElementById("countdowntimer").textContent = timeleft;
+      if(timeleft <= 0)
+          clearInterval(downloadTimer);
+      },1000); 
+      </script>
+    <!-- Bootstrap JS CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
